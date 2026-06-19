@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterCare Assisted Living - Saint Paul, MN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png') center/cover no-repeat;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: #f5f5f5;
+        }
+
+        section img {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            min-height: 300px;
+        }
+
+        section > div {
+            flex: 1;
+        }
+
+        h1, h2 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+        }
+
+        section h1 {
+            font-size: 3.5em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        section ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        section li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            min-height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png') center/cover no-repeat;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        #hero img {
+            display: none;
+        }
+
+        #hero p {
+            color: white;
+            font-size: 1.3em;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2c5aa0, #1e4070);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.05em;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(44, 90, 160, 0.3);
+        }
+
+        .cite {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background: #2c5aa0;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column !important;
+                padding: 40px 20px;
+                gap: 20px;
+            }
+
+            section img {
+                min-height: 250px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+
+            #hero h1 {
+                font-size: 2.2em;
+            }
+
+            #hero p {
+                font-size: 1.1em;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">🏥 BetterCare</div>
+            <div>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#dining">Dining</a>
+                <a href="#activities">Activities</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome Home</h1>
+        <p>Warm, person-centered clinical care for adults aged 55 and older in the heart of Saint Paul.</p>
+        <button class="cta-button">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/Website%20-%20About%20Section.png" alt="Compassionate staff member providing friendly, person-centered support to a resident in our common area.">
+        <div>
+            <h2>Where Home Meets Care</h2>
+            <p>At BetterCare, we partner with residents aged 55+ and their families to support quality of life, dignity, and independence every day<span class="cite">[cite: 1]</span>.</p>
+            <p>Our mission is to create a warm, supportive environment where every resident feels valued, heard, and celebrated for who they are.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/Website%20-%20Services%20Section.png" alt="Clinical staff member assisting a resident with dignity, ensuring safety and comfort.">
+        <div>
+            <h2>Care & Services</h2>
+            <p>Our holistic approach ensures every resident, 55 and better, experiences a fulfilling, engaged, and joyful life<span class="cite">[cite: 1]</span>.</p>
+            <ul>
+                <li><strong>Clinical Care:</strong> Precision medication management and seamless health coordination<span class="cite">[cite: 1]</span>.</li>
+                <li><strong>Accessible Living:</strong> Fully accessible for all mobility levels<span class="cite">[cite: 1]</span>.</li>
+                <li><strong>24/7 Support:</strong> Professional staff available around the clock for peace of mind.</li>
+                <li><strong>Personalized Care Plans:</strong> Customized approaches tailored to each resident's unique needs.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section id="dining">
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/Website%20-%20Dining%20Section.png" alt="Freshly prepared, health-conscious meals served in a welcoming dining environment.">
+        <div>
+            <h2>Meals & Nutrition</h2>
+            <p>Freshly prepared, health-conscious meals served daily, accommodating specific dietary needs<span class="cite">[cite: 1]</span>.</p>
+            <p>Our experienced culinary team designs menus that are not only nutritious but also delicious and tailored to individual preferences and medical requirements. We celebrate dining as a social experience that brings our community together.</p>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/Website%20-%20Activities%20Section.png" alt="Residents participating in a group recreation activity, fostering social connection and well-being.">
+        <div>
+            <h2>Activities & Social Life</h2>
+            <p>Social connection drives holistic well-being. We offer daily recreation built around resident interests<span class="cite">[cite: 1]</span>.</p>
+            <ul>
+                <li>Group fitness and wellness programs</li>
+                <li>Arts, crafts, and creative expression activities</li>
+                <li>Community outings and field trips</li>
+                <li>Educational seminars and workshops</li>
+                <li>Spiritual and cultural celebrations</li>
+                <li>Game nights, movie screenings, and social events</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Location/Contact Section -->
+    <section id="contact">
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/Website%20-%20Exterior%20Banner.png" alt="The welcoming entrance of BetterCare Assisted Living on University Avenue, Saint Paul.">
+        <div>
+            <h2>Ideally Situated</h2>
+            <p>Located at <strong>417 University Ave W, Saint Paul, MN 55103</strong>. Easy access for families and healthcare providers<span class="cite">[cite: 1]</span>.</p>
+            <p>Our convenient location puts you in the heart of vibrant Saint Paul, with easy access to healthcare facilities, shopping, dining, and cultural attractions.</p>
+            <h3 style="color: #2c5aa0; margin-top: 25px; margin-bottom: 10px;">Get in Touch</h3>
+            <p><strong>Phone:</strong> <a href="tel:612-458-8856" style="color: #2c5aa0; text-decoration: none;">612-458-8856</a> / <a href="tel:612-986-7763" style="color: #2c5aa0; text-decoration: none;">612-986-7763</a></p>
+            <p><strong>Address:</strong> 417 University Ave W, Saint Paul, MN 55103</p>
+            <button class="cta-button">Schedule a Tour</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BetterCare Assisted Living. All rights reserved.</p>
+        <p>Providing compassionate, person-centered care in Saint Paul.</p>
+        <p style="margin-top: 20px;">
+            <a href="tel:612-458-8856">Call Us Today</a> | 
+            <a href="mailto:info@bettercare.local">Email Us</a> | 
+            <a href="#services">Our Services</a>
+        </p>
+    </footer>
+</body>
+</html>
