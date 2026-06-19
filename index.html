@@ -20,7 +20,7 @@
 
         header {
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png') center/cover no-repeat;
+                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png?raw=true') center/cover no-repeat;
             padding: 20px;
             position: sticky;
             top: 0;
@@ -36,10 +36,23 @@
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 1.5em;
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .nav-logo span {
+            font-size: 1.3em;
             font-weight: bold;
             color: white;
+            display: none;
         }
 
         nav a {
@@ -47,6 +60,7 @@
             text-decoration: none;
             margin: 0 15px;
             transition: opacity 0.3s ease;
+            font-weight: 500;
         }
 
         nav a:hover {
@@ -126,7 +140,7 @@
             flex-direction: column;
             min-height: 600px;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png') center/cover no-repeat;
+                        url('https://raw.githubusercontent.com/bettercare421/Images/main/Website%20Hero%20Banner.png?raw=true') center/cover no-repeat;
             color: white;
             padding: 60px 20px;
         }
@@ -172,6 +186,11 @@
             text-align: center;
             padding: 40px 20px;
             margin-top: 40px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
         }
 
         footer p {
@@ -223,6 +242,10 @@
             nav a {
                 margin: 5px 0;
             }
+
+            .nav-logo img {
+                height: 40px;
+            }
         }
     </style>
 </head>
@@ -230,7 +253,10 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">🏥 BetterCare</div>
+            <div class="nav-logo">
+                <img src="https://raw.githubusercontent.com/bettercare421/Images/main/BetterCare-Logo.png?raw=true" alt="BetterCare Assisted Living Logo">
+                <span>BetterCare</span>
+            </div>
             <div>
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
@@ -309,7 +335,7 @@
             <p>Located at <strong>417 University Ave W, Saint Paul, MN 55103</strong>. Easy access for families and healthcare providers<span class="cite">[cite: 1]</span>.</p>
             <p>Our convenient location puts you in the heart of vibrant Saint Paul, with easy access to healthcare facilities, shopping, dining, and cultural attractions.</p>
             <h3 style="color: #2c5aa0; margin-top: 25px; margin-bottom: 10px;">Get in Touch</h3>
-            <p><strong>Phone:</strong> <a href="tel:612-458-8856" style="color: #2c5aa0; text-decoration: none;">612-458-8856</a> / <a href="tel:612-986-7763" style="color: #2c5aa0; text-decoration: none;">612-986-7763</a></p>
+            <p><strong>Phone:</strong> <a href="tel:612-458-8856" style="color: #ffdd57; text-decoration: none;">612-458-8856</a> / <a href="tel:612-986-7763" style="color: #ffdd57; text-decoration: none;">612-986-7763</a></p>
             <p><strong>Address:</strong> 417 University Ave W, Saint Paul, MN 55103</p>
             <button class="cta-button">Schedule a Tour</button>
         </div>
@@ -317,6 +343,7 @@
 
     <!-- Footer -->
     <footer>
+        <img src="https://raw.githubusercontent.com/bettercare421/Images/main/BetterCare-Logo.png?raw=true" alt="BetterCare Assisted Living Logo" class="footer-logo">
         <p>&copy; 2024 BetterCare Assisted Living. All rights reserved.</p>
         <p>Providing compassionate, person-centered care in Saint Paul.</p>
         <p style="margin-top: 20px;">
